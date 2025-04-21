@@ -1,0 +1,117 @@
+.background {
+  background-image: url("./loginPage.jpg");
+  background-size: cover;
+  background-position: bottom left;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-red);
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link:hover {
+  color: var(--color-red);
+}
+h1 {
+  color: var(--color-red);
+}
+.add-to-cartbtn::after {
+  content: "";
+  background-color: var(--color-yellow);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.add-to-cartbtn:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.add-to-cartbtn:hover {
+  color: black;
+}
+#animated-text {
+  animation: moveText 4s ease-in-out infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(300%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(300%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+#about-us {
+  scroll-margin-top: 8rem;
+}
+#events {
+  scroll-margin-top: 8rem;
+}
+#Bestsellers {
+  scroll-margin-top: 8rem;
+}
+
+/* Đặt vị trí cố định */
+.fixed {
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Hiệu ứng rung nhẹ */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+/* Áp dụng rung cho nút */
+.zalo-button:hover,
+.phone-button:hover {
+  animation: shake 0.5s ease-in-out;
+}
+body.showCart .cartTab {
+  transform: translateX(0);
+}

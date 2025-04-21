@@ -1,0 +1,23 @@
+.background {
+  background-image: url(../img/Login-Register-BG.png); /* Thay URL ảnh nền của bạn */
+  background-size: cover;
+  background-position: center;
+}
+
+.form.login {
+  transform: translateX(0);
+}
+.form.register {
+  transform: translateX(100%);
+}
+.form-container.show-register .form.login {
+  transform: translateX(-100%);
+}
+.form-container.show-register .form.register {
+  transform: translateX(0);
+}
+
+form button:hover {
+  background-color: var(--color-brownhover);
+  color: white;
+}

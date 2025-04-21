@@ -1,0 +1,296 @@
+/* Định nghĩa các biến màu sắc để dễ dàng sử dụng */
+:root {
+  --color-red: #FF0000; /* Màu đỏ */
+  --color-yellow: #FFCC00; /* Màu vàng */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #D1D5DB;
+  --color-blue: #1E40AF; /* Màu xanh dương */
+}
+
+/* Liên kết trong menu với hiệu ứng hover */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-black);
+  transition: color 0.5s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-red);
+  transition: width 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--color-red);
+}
+
+/* Header */
+header {
+  background-color: var(--color-black);
+  padding: 0.5rem 2rem; /* Giảm padding để header nhỏ hơn */
+  font-size: 1rem; /* Giảm kích thước font */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  height: 30px; /* Giảm kích thước logo */
+  width: auto;
+}
+
+header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+  color: var(--color-red);
+}
+
+/* Các thẻ menu (Navigation) */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 10;
+  padding: 0.5rem 2rem; /* Giảm padding để menu nhỏ hơn */
+  font-size: 1rem; /* Giảm kích thước font */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem; /* Giảm padding để menu nhỏ hơn */
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 0.75rem; /* Giảm khoảng cách giữa các menu items */
+}
+
+nav a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: 1rem; /* Giảm kích thước chữ */
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--color-red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* Header - Shopping Cart Icon */
+.icon-cart {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-cart:hover {
+  color: var(--color-red);
+}
+
+/* Giỏ hàng (Cart) */
+body.showCart .cartTab {
+  transform: translateX(0); /* Hiển thị giỏ hàng */
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng mượt mà */
+}
+
+.cartTab {
+  transform: translateX(100%); /* Giữ giỏ hàng ngoài màn hình khi không có lớp showCart */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng mượt mà khi đóng giỏ hàng */
+}
+
+/* Các phần tử trong giỏ hàng */
+.cartTab .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nút "Thêm vào giỏ hàng" */
+.add-to-cartbtn {
+  position: relative;
+  display: inline-block;
+  color: var(--color-black);
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.add-to-cartbtn::after {
+  content: "";
+  background-color: var(--color-yellow);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.add-to-cartbtn:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.add-to-cartbtn:hover {
+  color: var(--color-black);
+}
+
+/* Các hiệu ứng cho phần chi tiết sản phẩm */
+.main-product {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-product img {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-product h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.main-product p {
+  font-size: 1.125rem;
+  color: var(--color-gray);
+}
+
+.main-product .price {
+  font-size: 2rem;
+  color: var(--color-yellow);
+}
+
+/* Nút thêm vào giỏ hàng và mua ngay */
+.main-product .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.main-product .buttons button {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-product .buttons .buy-now {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.main-product .buttons .buy-now:hover {
+  background-color: #1e40af; /* Màu xanh đậm khi hover */
+}
+
+.main-product .buttons .add-to-cart {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.main-product .buttons .add-to-cart:hover {
+  background-color: #fbbf24; /* Màu vàng đậm khi hover */
+}
+
+/* Các sản phẩm liên quan */
+.related-products {
+  margin-top: 2rem;
+}
+
+.related-products .title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.related-products .splide__list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.related-products .splide__slide {
+  flex: 0 0 30%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-products .splide__slide img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.related-products .splide__slide .product-info {
+  padding: 1rem;
+}
+
+.related-products .splide__slide .product-info h3 {
+  font-size: 1.125rem;
+  color: var(--color-black);
+}
+
+.related-products .splide__slide .product-info .price {
+  color: var(--color-yellow);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}

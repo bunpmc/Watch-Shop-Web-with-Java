@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lora", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.textHeader_font {
+  font-family: "Playfair Display", serif;
+}
+.nav_font {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-red: #800000;
+  --color-yellow: #ffd700;
+  --color-white: #f5f5dc;
+  --color-brownhover: #ff6b00;
+  --color-brown-layout: #ba5c197a;
+  --color-brown-dark: #4e270bdc;
+  --color-gray: #8a8888;
+  --color-blue: #003366;
+}
+/* Đen: #000000
+Vàng ánh kim: #FFD700
+Bạc: #C0C0C0
+Xám đậm (Charcoal Gray): #36454F
+Trắng ngà: #F5F5F5
+Màu nút:
+Vàng ánh kim (hoặc màu đồng): #FFD700
+Trắng: #FFFFFF
+Xanh dương đậm: #003366
+Đỏ tía: #800000
+Xám bạc: #B0B0B0 */
+
+/* s */

@@ -1,0 +1,7 @@
+/* Các lớp tùy chỉnh để giữ cho phần tab hiển thị và ẩn */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
